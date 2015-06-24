@@ -1,0 +1,39 @@
+README
+- Michael Jones		mrj0006
+- Andrew Kyle Taylor	akt0011
+
+===================================================
+DESCRIPTION:
++ scoSim.c
++ 
+
+===================================================
+COMPILATION INSTRUCTIONS:
++ Change directory to file location |	cd michael_jones_project4
++ Compile using gcc		    |	gcc scoSim.c
+
+===================================================
+HOW TO USE:
++ Compile using instructions above
++ Run the default output program    |	./a.out
++ Enter the file name (lab4c.s)	    |	Enter a file name: lab4c.s
++ Enter 'a' or 'b' for type of run  |	pipeSim (a) or fullSim (b): a
++ Results will be printed
+
+===================================================
+DATA:
++ The program will display a set of data when run with lab4c.s (the following):
+    = for pipeSim (a)
+	- X0: 0.57
+	- Y0: 0.00
+	- # of Clock Cycles: 504
+	- # of Instruction Counts: 503
+	- # of NOPs: 99
+    = for fullSim (b)
+	- X0: 0.57
+	- Y0: 0.00
+	- # of Clock Cycles: 1492
+	- # of Instruction Counts: 699
+	- # of NOPs: 99
+
+===================================================

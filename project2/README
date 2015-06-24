@@ -1,0 +1,30 @@
+README
+- Michael Jones		mrj0006
+- Andrew Kyle Taylor	akt0011
+
+===================================================
+DESCRIPTION:
++ GPRsim.c
++ This General Purpose Register machine simulator takes a binary-encoded program with text and data components and stores them into a main memory. Calling each instruction one at a time, it executes the program, which in this case solves whether a word is a palindrome or not.
+
+===================================================
+COMPILATION INSTRUCTIONS:
++ Change directory to file location |	cd group24_project2
++ Compile using gcc		    |	gcc GPRSim.c -g
+
+===================================================
+HOW TO USE:
++ Compile using instructions above
++ Run the default output program    |	./a.out
++ Enter the file name (palindrome.s)|	Enter a file name: palindrome.s
++ Enter a word to check		    |	Enter a word: racecar
++ Results will be printed
+
+===================================================
+DESIGN ISSUES:
++ How to display label on binary file:
+	-(SLN) Have a flag opcode that specifically points to labels, 		and map them at a compiler level in memory.
++ How to have variable instruction length:
+	-(SLN) Use opcode flag's to decide what type of instruction is 
+	being used.
+ 

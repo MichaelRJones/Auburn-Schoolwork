@@ -1,0 +1,62 @@
+README file
+%	
+%	AUTHORS: Michael Jones - mrj0006
+%		 Andrew Kyle Taylor - akt0011
+%	GROUP:	 26
+%
+
+===========================================================================
++++ HOW TO COMPILE +++
+stackSim.c:
+	- Change directory to file location  |	cd Documents
+	- Compile the program using gcc	     |	gcc stackSim.c -o output
+	
+accumSim.cpp:
+	- Change directory to file location  |	cd Documents
+	- Compile the program using gcc	     |	g++ accumSim.cpp -std=c++0x
+
+============================================================================
++++ HOW TO USE +++
+Both simulators:
+	- Compile using instructions above.
+	- Run the output program.
+		a)  For stackSim.c, run output		| ./output
+		b)  For accumSim.c, run default output  | ./a.out
+	- Type in sample file name when prompted*
+		a)  For stackSim.c, type in stackCode
+		b)  For accumSim.c, type in accumCode
+* File must be in the same directory as simulator
+	
+============================================================================
++++ HOW THE SYSTEM WORKS +++
+Stack Machine Strategy:
+	Load in the text and data segments of the text file into a text array 
+	and data array, respectively. Run each instruction in a switch-case loop,
+	and iterate down the text array until the END instruction is found.
+	Display the answer held in the designated ANSWER register. Terminate program.
+
+Accumulator Machine Strategy:
+	Load in the text and split apart the binaries to store in their 
+	respectives places in main memory, ensuring data is only in the data
+	section and instructions go into the instruction section.
+	Instruction memory is split into the op code and addresses for the 
+	data. Instructions are loaded into the switch case loop until the end
+	instruction is encountered.
+
+============================================================================
++++ DESIGN ISSUES +++
+Stack Simulator
+	(SOLVED)
+	- Reading instructions from file by line, extra terminating chars 
+	were grabbed. SOL: Switched to reading file one char at a time.
+
+Accumulator Simulator
+	(SOLVED)
+	- Wrote the program in c++ in Windows, so porting it to work with 
+	  gcc version 4.4.7 was a hassle. SOL: Took out nullptrs and used c
+	  strings in certain situations. 
+	
+	(UNSOLVED)	
+	- Got a segmentation fault while returning from main. Could not find
+	  where the stack was being corrupted. Temp SOL: Used exit(0) to exit
+	  the program without an error.

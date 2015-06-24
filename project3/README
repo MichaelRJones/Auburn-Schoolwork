@@ -1,0 +1,38 @@
+README
+- Michael Jones		mrj0006
+- Andrew Kyle Taylor	akt0011
+
+===================================================
+DESCRIPTION:
++ pipeSim.c
++ This General Purpose Register machine with Pipelining simulator takes a binary-encoded program with text and data components and stores them into a main memory. The instruction execution cycle is broken into five stages (fetch, deconde, execute, memory, and writeback), each instruction taking five clock cycles to complete. However, different instructions can be in different stages at one point. 
+
+===================================================
+COMPILATION INSTRUCTIONS:
++ Change directory to file location |	cd michael_jones_project3
++ Compile using gcc		    |	gcc pipeSim.c
+
+===================================================
+HOW TO USE:
++ Compile using instructions above
++ Run the default output program    |	./a.out
++ Enter the file name (lab3c.s)	    |	Enter a file name: lab3c.s
++ Results will be printed
+***********************************************************************************************************************************
+*NOTE: If segmentation fault occurs, simply RECOMPILE the program the exact same way (possibly renaming it with the -o output tag)*
+***********************************************************************************************************************************
+===================================================
+DATA:
++ The program will display a set of data when run with lab3c.s (the following):
+	- Answer: 8880
+	- # of Clock Cycles: 61
+	- # of Instruction Counts: 17
+	- # of NOPS: 16
+
+===================================================
+DESIGN ISSUES:
++ In the execute stage, accounting for changed registers not yet in the writeback stage
+	-(SLN) Take the latches from future stages and check the register destination (forwarding)
++ In the instruction decode stage, accounting for changed registers not yet in the execute or writeback stage (for branching)
+	-(SLN) Take the latches from future stages and check the register destination (forwarding)
+ 
