@@ -5,8 +5,7 @@ README
 ===================================================
 DESCRIPTION:
 + scoSim.c
-+ 
-
++ This program reads a binary encoded file and stores information as well as preforms operations by simulating multi-pipelined processor. The program provides an option to differentiate between allowing multiple instructions to occupy multiple steps of a pieline, and only allowing one instruction per pipeline. A scoreboard keeps track of the status and relevant registers for each instruction in each pipline. 
 ===================================================
 COMPILATION INSTRUCTIONS:
 + Change directory to file location |	cd michael_jones_project4
